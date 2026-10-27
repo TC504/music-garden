@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-BuJf4w88.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CzZd0051.css">
+    <script type="module" crossorigin src="./assets/index-UeAPT45p.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BOOyyUSi.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -24,6 +24,33 @@
     <p id="place" aria-live="polite"></p>
     <nav id="worlds" aria-label="Travel to another region"></nav>
 
+    <p id="guide" aria-live="polite"></p>
+
+    <button id="help" type="button" aria-label="How to play">?</button>
+
+    <dialog id="help-panel" class="panel" aria-labelledby="help-title">
+      <h2 id="help-title">How to play</h2>
+      <dl class="how-to-play">
+        <dt>Tap anywhere</dt>
+        <dd>Plant a seed. Higher on the screen plays higher notes.</dd>
+        <dt>Tap a plant</dt>
+        <dd>It says hello in its own way.</dd>
+        <dt>Swipe across plants</dt>
+        <dd>Make wind that plays them like strings.</dd>
+        <dt>Press and hold</dt>
+        <dd>Grow a bigger, deeper plant.</dd>
+        <dt>Drag a plant</dt>
+        <dd>Move it. Two different plants side by side may cross-breed.</dd>
+        <dt>Dots at the bottom</dt>
+        <dd>Travel to Japan, China, India, Africa, and the Nordic north.</dd>
+        <dt>Leave it alone</dt>
+        <dd>Plants bloom, then fade, and the garden keeps playing and planting by itself.</dd>
+      </dl>
+      <div class="share-actions">
+        <button id="help-close" type="button">Got it</button>
+      </div>
+    </dialog>
+
     <button id="share" type="button" aria-label="Share this garden">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -33,7 +60,7 @@
       </svg>
     </button>
 
-    <dialog id="share-panel" aria-labelledby="share-title">
+    <dialog id="share-panel" class="panel" aria-labelledby="share-title">
       <h2 id="share-title">Scan to open the garden</h2>
       <canvas id="share-code" width="220" height="220"></canvas>
       <p id="share-link"></p>
