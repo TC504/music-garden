@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Music Garden</title>
+    <script type="module" crossorigin src="./assets/index-DL5EAY-P.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CzZd0051.css">
+  </head>
+  <body>
+    <canvas id="garden"></canvas>
+
+    <div id="title">
+      <h1>Music Garden</h1>
+      <p class="how-to">
+        <span>Tap to plant</span> · <span>Hold for a big one</span> ·
+        <span>Swipe to make wind</span><br />
+        <span>Tap a plant to hear it sing</span> · <span>Drag a plant to move it</span>
+      </p>
+      <p class="start">Tap anywhere to begin</p>
+    </div>
+
+    <p id="notice" hidden></p>
+    <p id="place" aria-live="polite"></p>
+    <nav id="worlds" aria-label="Travel to another region"></nav>
+
+    <button id="share" type="button" aria-label="Share this garden">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <path d="M14 14h3v3h-3zM18 18h3v3h-3zM14 20h2M20 14v2" />
+      </svg>
+    </button>
+
+    <dialog id="share-panel" aria-labelledby="share-title">
+      <h2 id="share-title">Scan to open the garden</h2>
+      <canvas id="share-code" width="220" height="220"></canvas>
+      <p id="share-link"></p>
+      <p id="share-local" hidden>
+        This is your own computer's address. Share the public link once the garden is online.
+      </p>
+      <div class="share-actions">
+        <button id="share-copy" type="button">Copy link</button>
+        <button id="share-close" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <button id="mute" type="button" aria-label="Mute sound" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="speaker" d="M4 9v6h4l5 4V5L8 9H4z" />
+        <path class="waves" d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" />
+        <path class="slash" d="M16 9l6 6M22 9l-6 6" />
+      </svg>
+    </button>
+
+  </body>
+</html>
