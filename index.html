@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-bQwln-5l.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-ByeNgiQx.css">
+    <script type="module" crossorigin src="./assets/index-dGhjPJJd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CypcF34W.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -89,6 +89,43 @@
       <div id="sleep-choices" class="share-actions focus-choices"></div>
       <div class="share-actions">
         <button id="focus-cancel" type="button">Not now</button>
+      </div>
+    </dialog>
+
+    <button id="together" type="button">Together</button>
+
+    <dialog id="together-panel" class="panel" aria-labelledby="together-title">
+      <h2 id="together-title">Garden together</h2>
+      <div id="together-start">
+        <p class="panel-note">Plant in one garden with a friend, each on your own device.</p>
+        <div class="share-actions">
+          <button id="together-host" type="button">Start a garden</button>
+        </div>
+        <form id="together-join" class="together-join">
+          <label for="together-code">Or join a friend's garden</label>
+          <div class="share-actions">
+            <input
+              id="together-code"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="4"
+              placeholder="0000"
+              aria-describedby="together-error"
+            />
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </div>
+      <div id="together-room" hidden>
+        <p id="together-room-text" class="panel-note"></p>
+        <p id="together-number" class="together-number"></p>
+        <div class="share-actions">
+          <button id="together-leave" type="button">Leave</button>
+        </div>
+      </div>
+      <p id="together-error" class="together-error" role="alert"></p>
+      <div class="share-actions">
+        <button id="together-close" type="button">Close</button>
       </div>
     </dialog>
 
