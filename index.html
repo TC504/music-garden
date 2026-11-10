@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-BPRESPuR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BOOyyUSi.css">
+    <script type="module" crossorigin src="./assets/index-D-RJAPtZ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bt3nVAVw.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -21,6 +21,29 @@
     <nav id="worlds" aria-label="Travel to another region"></nav>
 
     <p id="guide" aria-live="polite"></p>
+
+    <button id="focus" type="button">Focus</button>
+
+    <div id="focus-bar" role="status" hidden>
+      <span id="focus-clock"></span>
+      <button id="focus-quit" type="button">Give up</button>
+    </div>
+
+    <div id="focus-done" role="status" hidden>
+      <span id="focus-done-text"></span>
+      <button id="focus-done-close" type="button">OK</button>
+    </div>
+
+    <dialog id="focus-panel" class="panel" aria-labelledby="focus-title">
+      <h2 id="focus-title">Focus with the garden</h2>
+      <p class="panel-note">
+        The garden plays softly while a flower grows with you. When time is up, it blooms.
+      </p>
+      <div id="focus-choices" class="share-actions focus-choices"></div>
+      <div class="share-actions">
+        <button id="focus-cancel" type="button">Not now</button>
+      </div>
+    </dialog>
 
     <button id="help" type="button" aria-label="How to play">?</button>
 
@@ -43,6 +66,7 @@
         <dd>Plants bloom, then fade, and the garden keeps playing and planting by itself.</dd>
       </dl>
       <div class="share-actions">
+        <button id="help-restart" type="button">Show the tips again</button>
         <button id="help-close" type="button">Got it</button>
       </div>
     </dialog>
