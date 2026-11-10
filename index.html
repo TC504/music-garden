@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-D4a7iSvU.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CvMtzGeQ.css">
+    <script type="module" crossorigin src="./assets/index-0S8F3hQg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BByW2F1c.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
 
     <div id="title">
       <h1>Music Garden</h1>
-      <p class="how-to">A garden where every plant is an instrument</p>
+      <p class="tagline">A garden where every plant is an instrument.</p>
+      <ul class="title-ways">
+        <li><canvas data-icon="seed" aria-hidden="true"></canvas>Play</li>
+        <li><canvas data-icon="sprout" aria-hidden="true"></canvas>Focus</li>
+        <li><canvas data-icon="lotus" aria-hidden="true"></canvas>Relax</li>
+        <li><canvas data-icon="moon" aria-hidden="true"></canvas>Sleep</li>
+      </ul>
       <p class="start">Tap anywhere to begin</p>
     </div>
 
@@ -28,7 +34,7 @@
     </p>
 
     <div id="corner">
-      <button id="focus" type="button">Focus</button>
+      <button id="focus" type="button">Stay a while</button>
 
       <div id="focus-bar" role="status" hidden>
         <span id="focus-clock"></span>
@@ -56,13 +62,13 @@
       </div>
       <p id="record-total"></p>
       <p id="record-empty" hidden>
-        No flowers this week yet. Tap Focus to grow one while you study.
+        No flowers this week yet. Tap Stay a while, then Focus, to grow one while you study.
       </p>
       <ol id="record-days"></ol>
     </section>
 
     <dialog id="focus-panel" class="panel" aria-labelledby="focus-title">
-      <h2 id="focus-title">Spend some time with the garden</h2>
+      <h2 id="focus-title">Stay a while</h2>
       <h3 class="panel-heading">Focus</h3>
       <p class="panel-note">
         The garden plays softly while a flower grows with you. When time is up, it blooms.
