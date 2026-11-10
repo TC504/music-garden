@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-D-RJAPtZ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bt3nVAVw.css">
+    <script type="module" crossorigin src="./assets/index-pV7VnTrk.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B1NxwVJ4.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -22,17 +22,39 @@
 
     <p id="guide" aria-live="polite"></p>
 
-    <button id="focus" type="button">Focus</button>
+    <div id="corner">
+      <button id="focus" type="button">Focus</button>
 
-    <div id="focus-bar" role="status" hidden>
-      <span id="focus-clock"></span>
-      <button id="focus-quit" type="button">Give up</button>
+      <div id="focus-bar" role="status" hidden>
+        <span id="focus-clock"></span>
+        <button id="focus-quit" type="button">Give up</button>
+      </div>
+
+      <button id="my-garden" type="button">My garden</button>
+
+      <div id="focus-done" role="status" hidden>
+        <span id="focus-done-text"></span>
+        <button id="focus-done-garden" type="button">See my garden</button>
+        <button id="focus-done-close" type="button">OK</button>
+      </div>
     </div>
 
-    <div id="focus-done" role="status" hidden>
-      <span id="focus-done-text"></span>
-      <button id="focus-done-close" type="button">OK</button>
-    </div>
+    <section id="record" aria-labelledby="record-title" hidden>
+      <header class="record-top">
+        <button id="record-back" type="button" aria-label="Back to the garden">←</button>
+        <h2 id="record-title">My garden</h2>
+      </header>
+      <div class="record-week">
+        <button id="record-prev" type="button" aria-label="Earlier week">‹</button>
+        <p id="record-range"></p>
+        <button id="record-next" type="button" aria-label="Later week">›</button>
+      </div>
+      <p id="record-total"></p>
+      <p id="record-empty" hidden>
+        No flowers this week yet. Tap Focus to grow one while you study.
+      </p>
+      <ol id="record-days"></ol>
+    </section>
 
     <dialog id="focus-panel" class="panel" aria-labelledby="focus-title">
       <h2 id="focus-title">Focus with the garden</h2>
