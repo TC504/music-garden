@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-BM8Ojs--.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRtBQ5j1.css">
+    <script type="module" crossorigin src="./assets/index-C2z5kd8I.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-E_wsohnR.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -61,6 +61,7 @@
       <header class="record-top">
         <button id="record-back" type="button" aria-label="Back to the garden">←</button>
         <h2 id="record-title">My garden</h2>
+        <button id="record-book" type="button">Flower book</button>
       </header>
       <div class="record-week">
         <button id="record-prev" type="button" aria-label="Earlier week">‹</button>
@@ -82,6 +83,19 @@
         No flowers this week yet. Tap Stay a while, then Focus, to grow one while you study.
       </p>
       <ol id="record-days"></ol>
+    </section>
+
+    <section id="book" aria-labelledby="book-title" hidden>
+      <header class="record-top">
+        <button id="book-back" type="button" aria-label="Back to My garden">←</button>
+        <h2 id="book-title">Flower book</h2>
+      </header>
+      <p id="book-count"></p>
+      <div id="book-tabs" class="book-tabs" role="tablist" aria-label="Pages of the flower book"></div>
+      <p id="book-empty" hidden>
+        No hybrids yet. Drag two different flowers side by side and watch what grows.
+      </p>
+      <ul id="book-flowers" class="book-flowers"></ul>
     </section>
 
     <dialog id="focus-panel" class="panel" aria-labelledby="focus-title">
