@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-bI9rdCg3.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-E_wsohnR.css">
+    <title>Music Garden</title>
+    <script type="module" crossorigin src="./assets/index-Eq5c9HnR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Dmk0itPZ.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -159,6 +159,24 @@
       </div>
     </dialog>
 
+    <button id="settings" type="button" aria-label="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"
+        />
+      </svg>
+    </button>
+
+    <dialog id="settings-panel" class="panel" aria-labelledby="settings-title">
+      <h2 id="settings-title">Settings</h2>
+      <p id="settings-now" class="panel-note"></p>
+      <div id="settings-rows"></div>
+      <div class="share-actions">
+        <button id="settings-close" type="button">Done</button>
+      </div>
+    </dialog>
+
     <button id="help" type="button" aria-label="How to play">?</button>
 
     <dialog id="help-panel" class="panel" aria-labelledby="help-title">
@@ -214,6 +232,6 @@
         <path class="slash" d="M16 9l6 6M22 9l-6 6" />
       </svg>
     </button>
-
+
   </body>
 </html>
