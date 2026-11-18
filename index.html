@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-M5Zsd1jt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-vq3Q6zQF.css">
+    <script type="module" crossorigin src="./assets/index-q7DhF2cn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BWL9T9Fv.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -28,6 +28,7 @@
 
     <p id="guide" aria-live="polite"></p>
     <p id="away" aria-live="polite"></p>
+    <p id="note-float" aria-live="polite"></p>
 
     <p id="breath" aria-live="polite" hidden>
       <span id="breath-text"></span>
@@ -179,6 +180,13 @@
         <p id="mood-reply-text" aria-live="polite"></p>
         <button id="mood-suggest" type="button"></button>
       </div>
+      <form id="mood-note" hidden>
+        <label for="mood-note-text">A few words to bury in today's flower</label>
+        <div class="mood-note-row">
+          <input id="mood-note-text" type="text" maxlength="120" autocomplete="off" />
+          <button type="submit">Bury</button>
+        </div>
+      </form>
       <div class="share-actions">
         <button id="mood-close" type="button">Done</button>
       </div>
