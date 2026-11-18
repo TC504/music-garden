@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-DshkyeZ9.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Zj1w2SeN.css">
+    <script type="module" crossorigin src="./assets/index-M5Zsd1jt.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-vq3Q6zQF.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -43,9 +43,12 @@
       </div>
 
       <button id="my-garden" type="button">My garden</button>
+      <button id="mood" type="button">Mood</button>
+      <button id="mood-ask" type="button" hidden>How are you today?</button>
 
       <div id="focus-done" role="status" hidden>
         <span id="focus-done-text"></span>
+        <button id="focus-done-mood" type="button">How do you feel now?</button>
         <button id="focus-done-garden" type="button">See my garden</button>
         <button id="focus-done-close" type="button">OK</button>
       </div>
@@ -167,6 +170,19 @@
         />
       </svg>
     </button>
+
+    <dialog id="mood-panel" class="panel" aria-labelledby="mood-title">
+      <h2 id="mood-title">How are you today?</h2>
+      <p class="panel-note">One a day. Choosing again changes it.</p>
+      <div id="mood-choices" role="group" aria-label="Moods"></div>
+      <div id="mood-reply" hidden>
+        <p id="mood-reply-text" aria-live="polite"></p>
+        <button id="mood-suggest" type="button"></button>
+      </div>
+      <div class="share-actions">
+        <button id="mood-close" type="button">Done</button>
+      </div>
+    </dialog>
 
     <dialog id="settings-panel" class="panel" aria-labelledby="settings-title">
       <h2 id="settings-title">Settings</h2>
