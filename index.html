@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-DGB6475a.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C5hNWkTy.css">
+    <script type="module" crossorigin src="./assets/index-C8wbjbQW.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-grw2E54s.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -46,6 +46,7 @@
       <button id="my-garden" type="button">My garden</button>
       <button id="mood" type="button">Mood</button>
       <button id="mood-ask" type="button" hidden>How are you today?</button>
+      <button id="gift-reply" type="button" hidden>Send a flower back</button>
 
       <div id="focus-done" role="status" hidden>
         <span id="focus-done-text"></span>
@@ -88,6 +89,10 @@
         No flowers this week yet. Tap Stay a while, then Focus, to grow one while you study.
       </p>
       <ol id="record-days"></ol>
+      <div id="record-gifts" hidden>
+        <h3>Flowers you received</h3>
+        <ul id="record-gift-list"></ul>
+      </div>
     </section>
 
     <section id="book" aria-labelledby="book-title" hidden>
@@ -191,6 +196,23 @@
       <div class="share-actions">
         <button id="mood-close" type="button">Done</button>
       </div>
+    </dialog>
+
+    <dialog id="gift-panel" class="panel" aria-labelledby="gift-title">
+      <h2 id="gift-title">Send a flower</h2>
+      <canvas id="gift-picture" aria-hidden="true"></canvas>
+      <div id="gift-colors" class="gift-colors" role="group" aria-label="Color"></div>
+      <form id="gift-form">
+        <label for="gift-words">A few words to go with it (optional)</label>
+        <input id="gift-words" type="text" maxlength="80" autocomplete="off" />
+        <p class="panel-note">Anyone with the link can see these words.</p>
+        <p id="gift-status" role="status"></p>
+        <p id="gift-link" hidden></p>
+        <div class="share-actions">
+          <button id="gift-send" type="submit">Copy link</button>
+          <button id="gift-close" type="button">Close</button>
+        </div>
+      </form>
     </dialog>
 
     <dialog id="settings-panel" class="panel" aria-labelledby="settings-title">
