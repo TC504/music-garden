@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-C8wbjbQW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-grw2E54s.css">
+    <script type="module" crossorigin src="./assets/index-CTbHs-vO.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BVHoHUc8.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -29,6 +29,16 @@
     <p id="guide" aria-live="polite"></p>
     <p id="away" aria-live="polite"></p>
     <p id="note-float" aria-live="polite"></p>
+
+    <div id="diary-card" role="status" hidden>
+      <p id="diary-card-heading"></p>
+      <p id="diary-card-story"></p>
+      <ul id="diary-card-tags" class="diary-tags"></ul>
+      <div class="share-actions">
+        <button id="diary-card-read" type="button">Read the diary</button>
+        <button id="diary-card-close" type="button">OK</button>
+      </div>
+    </div>
 
     <p id="breath" aria-live="polite" hidden>
       <span id="breath-text"></span>
@@ -66,6 +76,7 @@
       <header class="record-top">
         <button id="record-back" type="button" aria-label="Back to the garden">←</button>
         <h2 id="record-title">My garden</h2>
+        <button id="record-diary" type="button">Diary</button>
         <button id="record-book" type="button">Flower book</button>
       </header>
       <div class="record-week">
@@ -93,6 +104,21 @@
         <h3>Flowers you received</h3>
         <ul id="record-gift-list"></ul>
       </div>
+    </section>
+
+    <section id="diary" aria-labelledby="diary-title" hidden>
+      <header class="record-top">
+        <button id="diary-back" type="button" aria-label="Back to My garden">←</button>
+        <h2 id="diary-title">Garden diary</h2>
+      </header>
+      <div class="record-week">
+        <button id="diary-prev" type="button" aria-label="Earlier day">‹</button>
+        <p id="diary-heading"></p>
+        <button id="diary-next" type="button" aria-label="Later day">›</button>
+      </div>
+      <p id="diary-story"></p>
+      <ul id="diary-tags" class="diary-tags"></ul>
+      <p id="diary-empty" hidden>Nothing written yet. Plant a few seeds, and the garden will start its diary.</p>
     </section>
 
     <section id="book" aria-labelledby="book-title" hidden>
