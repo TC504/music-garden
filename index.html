@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Music Garden</title>
-    <script type="module" crossorigin src="./assets/index-DO_2wZqM.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-fmUAqs0e.css">
+    <script type="module" crossorigin src="./assets/index-BwxHhy4l.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-_ElAIcoJ.css">
   </head>
   <body>
     <canvas id="garden"></canvas>
@@ -32,6 +32,11 @@
     <p id="guide" aria-live="polite"></p>
     <div id="away" aria-live="polite"></div>
     <p id="note-float" aria-live="polite"></p>
+
+    <div id="record-bar" role="status" hidden>
+      <span id="record-clock"></span>
+      <button id="record-stop" type="button">Stop</button>
+    </div>
 
     <div id="diary-card" role="status" hidden>
       <p id="diary-card-heading"></p>
@@ -152,9 +157,15 @@
       <h3 class="panel-heading">Sleep</h3>
       <p class="panel-note">
         The garden falls asleep with you: the music fades, then the night sound, until all is
-        quiet. Pick a sound, then how long.
+        quiet. Pick a sound, a lullaby if you like, then how long.
       </p>
       <div id="sleep-sounds" class="share-actions focus-choices" aria-label="Night sound"></div>
+      <div class="lullaby-row">
+        <label for="sleep-lullaby">Lullaby</label>
+        <select id="sleep-lullaby">
+          <option value="">None</option>
+        </select>
+      </div>
       <div id="sleep-choices" class="share-actions focus-choices"></div>
       <div class="share-actions">
         <button id="focus-cancel" type="button">Not now</button>
@@ -242,6 +253,47 @@
           <button id="gift-close" type="button">Close</button>
         </div>
       </form>
+    </dialog>
+
+    <button id="save-garden" type="button" aria-label="Save this garden">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3h12v18l-6-4-6 4z" />
+      </svg>
+    </button>
+
+    <dialog id="saves-panel" class="panel" aria-labelledby="saves-title">
+      <h2 id="saves-title">Save this garden</h2>
+      <img id="saves-preview" alt="This garden as it looks now" />
+      <form id="saves-form">
+        <label for="saves-name">A name (optional)</label>
+        <div class="mood-note-row">
+          <input id="saves-name" type="text" maxlength="40" autocomplete="off" />
+          <button type="submit">Save</button>
+        </div>
+      </form>
+      <p id="saves-status" role="status"></p>
+      <h3 class="panel-heading">Music box</h3>
+      <p class="panel-note">Record 20 seconds of planting, and send it to a friend as a link.</p>
+      <div class="share-actions">
+        <button id="record-start" type="button">Record 20 seconds</button>
+      </div>
+      <h3 class="panel-heading">Saved gardens</h3>
+      <p id="saves-empty" class="panel-note">No saved gardens yet. Save one, and tap it here to come back to it.</p>
+      <ul id="saves-list" class="saves-list"></ul>
+      <div class="share-actions">
+        <button id="saves-close" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="musicbox-panel" class="panel" aria-labelledby="musicbox-title">
+      <h2 id="musicbox-title">Your music box</h2>
+      <p id="musicbox-note" class="panel-note"></p>
+      <p id="musicbox-status" role="status"></p>
+      <p id="musicbox-link" hidden></p>
+      <div class="share-actions">
+        <button id="musicbox-send" type="button">Copy link</button>
+        <button id="musicbox-close" type="button">Close</button>
+      </div>
     </dialog>
 
     <dialog id="settings-panel" class="panel" aria-labelledby="settings-title">
